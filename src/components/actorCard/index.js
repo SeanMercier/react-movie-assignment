@@ -46,18 +46,13 @@ const ActorCard = ({ actors, action }) => {
             : img
         }
       />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          {actors.description || "No description available"}
-        </Typography>
-      </CardContent>
       <CardActions disableSpacing>
         <IconButton
           aria-label="toggle favorite"
           onClick={handleFavoriteClick}
           color={isFavorite ? "error" : "inherit"}
         >
-          <FavoriteIcon />
+          <AddToActorFavoritesIcon />
         </IconButton>
         <Link to={`/actors/${actors.id}`}>
           <Button variant="outlined" size="medium" color="primary">
@@ -67,6 +62,7 @@ const ActorCard = ({ actors, action }) => {
       </CardActions>
     </Card>
   );
+
 };
 
 export default ActorCard;
