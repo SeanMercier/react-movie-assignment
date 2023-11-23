@@ -31,12 +31,10 @@ const FavoriteActorsPage = () => {
       title="Favorite Actors"
       actors={actors}
       action={(actor) => (
-        <>
-          <RemoveFromActorFavoritesIcon
-            actor={actor}
-            onRemove={() => removeFromActorFavorites(actor.id)}
-          />
-        </>
+        <RemoveFromActorFavoritesIcon
+          actor={actor}
+          onRemove={() => removeFromActorFavorites(actor.id)}
+        />
       )}
     />
   );

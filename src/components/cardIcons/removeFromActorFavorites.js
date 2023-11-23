@@ -3,13 +3,12 @@ import { ActorContext } from "../../contexts/actorContext";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const RemoveFromActorFavoritesIcon = ({ actors }) => {
-  const context = useContext(ActorContext);
-
+const RemoveFromActorFavoritesIcon = ({ actor, onRemove }) => {
   const handleRemoveFromFavorites = (e) => {
     e.preventDefault();
-    context.removeFromActorFavorites(actors);
+    onRemove();
   };
+
   return (
     <IconButton
       aria-label="Remove from favorites"
