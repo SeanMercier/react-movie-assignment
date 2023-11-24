@@ -49,4 +49,4 @@ No non-standard setup requirements
 
 ## Independent learning (If relevant).
 
-Pagination, very brief - https://mui.com/material-ui/react-pagination/
+Pagination, very brief and unsuccessful - https://mui.com/material-ui/react-pagination/
