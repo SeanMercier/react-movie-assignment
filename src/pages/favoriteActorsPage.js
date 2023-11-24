@@ -7,7 +7,9 @@ import Spinner from "../components/spinner";
 import RemoveFromActorFavoritesIcon from "../components/cardIcons/removeFromActorFavorites";
 
 const FavoriteActorsPage = () => {
-  const { favorites: actorsIds, removeFromActorFavorites } = useContext(ActorContext);
+  const { favorites: actorsIds, removeFromActorFavorites } = useContext(
+    ActorContext
+  );
 
   const favoriteActorQueries = useQueries(
     actorsIds.map((actorId) => {
@@ -31,10 +33,13 @@ const FavoriteActorsPage = () => {
       title="Favorite Actors"
       actors={actors}
       action={(actor) => (
-        <RemoveFromActorFavoritesIcon
-          actor={actor}
-          onRemove={() => removeFromActorFavorites(actor.id)}
-        />
+        <>
+          <RemoveFromActorFavoritesIcon
+            actor={actor}
+            onRemove={() => removeFromActorFavorites(actor.id)}
+          />
+          {/* Add additional icons or buttons here */}
+        </>
       )}
     />
   );
