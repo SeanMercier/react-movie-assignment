@@ -5,7 +5,7 @@ import { Pagination } from '@mui/material'
 import Paper from '@mui/material/Paper';
 
 export default function Footer() {
-    const {setPageNumber,pageNum} = useContext(MoviesContext);
+    const {setPageNumber,pageNum} = useContext(MoviesContext)
     const [page,setPage] = useState(pageNum);
     
 
